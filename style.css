@@ -71,3 +71,27 @@ transition: transform 0.3s ease;
 -webkit-box-shadow: -9px 8px 21px 0px rgba(122,116,116,0.75);
 -moz-box-shadow: -9px 8px 21px 0px rgba(122,116,116,0.75);
 }
+
+/* responsive mobile */
+
+@media screen and (max-width: 510px) {
+
+    .container {
+        margin: 10px;
+    }
+
+    .container .color {
+        margin: 8px;
+        padding: 5px;
+    }
+
+    .color .rect-box {
+        width: 145px;
+        height: 148px;
+    }
+
+    .color .hex-value {
+        font-size: 0.8em;
+    }
+    
+}
