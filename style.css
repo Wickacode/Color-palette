@@ -50,6 +50,7 @@ transition: transform 0.3s ease;
     font-weight: bold;
     font-size: 1em;
     margin: 12px 0 8px;
+    text-transform: uppercase;
 }
 
 .refresh-btn {
