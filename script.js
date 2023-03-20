@@ -13,10 +13,19 @@ const generatePalette = () => {
     const color = document.createElement("li");
     color.classList.add("color");
     color.innerHTML = `<div class="rect-box" style="background: ${randomHex}"></div>
-                       <span class="hex-value">${randomHex}</span>`
+                       <span class="hex-value">${randomHex}</span>`;
+    
+    color.addEventListener("click", () => copyColor(color, randomHex));
     container.appendChild(color);
     } 
 }
 generatePalette();
+const copyColor = (elem, hexVal) => {
+    const colorElement = elem.querySelector(".hex-value");
+    navigator.clipboard.writeText(hexVal).then(() => {
+        colorElement.innerText = "Copié !";
+        setTimeout(() => colorElement.innerText = hexVal, 1000);
+    }).catch(() => alert ("Le code couleur n'a pas pu être copié"))
+}
 
 refreshBtn.addEventListener("click", generatePalette);
